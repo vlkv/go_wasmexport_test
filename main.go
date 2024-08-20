@@ -8,11 +8,11 @@ func main() {
 		panic(err)
 	}
 
-	mainFunc := instance.GetFunc(store, "_start")
-	_, err = mainFunc.Call(store)
-	if err != nil {
-		panic(err)
-	}
+	// mainFunc := instance.GetFunc(store, "_start")
+	// _, err = mainFunc.Call(store)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
 	addFunc := instance.GetFunc(store, "Add")
 	_, err = addFunc.Call(store, 40, 2)
