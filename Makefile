@@ -5,7 +5,7 @@ build: guest.wasm
 # NOTE: Install `gotip` first, see how https://pkg.go.dev/golang.org/dl/gotip
 .PHONY: guest.wasm
 guest.wasm:
-	GOOS=wasip1 GOARCH=wasm gotip build -o ./guest/guest.wasm ./guest
+	GOOS=wasip1 GOARCH=wasm gotip build -buildmode=c-shared -o ./guest/guest.wasm ./guest
 
 # NOTE: Install `wasmtime` first, see how https://docs.wasmtime.dev/cli-install.html#installing-wasmtime
 .PHONY: run_wasmtime_cli
